@@ -13,7 +13,7 @@ export default function Contact() {
       <main>
         <Header title="Welcome to my app!" />
         <p className="description">
-            Contact information 
+            Contact information {name}
         </p>
         <p className="description">
           
@@ -23,4 +23,13 @@ export default function Contact() {
       <Footer />
     </div>
   )
+}
+
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      name: 'Sample'
+    }
+  }
 }
