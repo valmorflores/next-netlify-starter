@@ -27,9 +27,12 @@ export default function Contact({name}) {
 
 
 export async function getServerSideProps() {
+  const res = await fetch('https://criativa.app/work/servers/sei1/gestorequipes/api/v1/version/0')
+  const json = await res.json
   return {
     props: {
-      name: 'Sample'
+      name: json.system.software,
+      version: json.system.version
     }
   }
 }
