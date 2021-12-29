@@ -11,12 +11,12 @@ export default function Contact({name}) {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="Information from API" />
         <p className="description">
-            Contact information {name}
+            Getting remote information 
         </p>
         <p className="description">
-          
+           <span><strong>{name}</strong></span>
         </p>
       </main>
 
